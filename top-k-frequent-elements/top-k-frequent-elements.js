@@ -11,9 +11,10 @@ var topKFrequent = function (nums, k) {
         else hashmap[nums[i]] = 1
     }
 
-    var keys = Object.keys(hashmap).sort(function (a, b) {
+    var keys = Object.keys(hashmap).sort((a, b) => {
         return hashmap[b] - hashmap[a];
     });
+    
     var result = keys.slice(0, k);
 
     return result;
